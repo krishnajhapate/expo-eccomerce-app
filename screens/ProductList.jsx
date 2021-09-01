@@ -6,15 +6,17 @@ import { getProducts } from '../services/ProductsService'
 export default function ProductList({ navigation }) {
 
     function renderProduct({ item: product }) {
-        <Product
-            {...product}
-            onPress={() => {
-                navigation.navigate('ProductDetails', { productId: product.id })
-            }}
-        />
+        return (
+            <Product
+                {...product}
+                onPress={() => {
+                    navigation.navigate('ProductDetails', { productId: product.id })
+                }}
+            />
+        )
     }
 
-    const [products, setProducts] = useState()
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         setProducts(getProducts())

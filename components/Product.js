@@ -6,7 +6,7 @@ export default function Product({ name, price, image, onPress }) {
         <TouchableOpacity style={styles.card} onPress={onPress}>
             <Image
                 source={image}
-                style={style.thumb} />
+                style={styles.thumb} />
             <View style={styles.infoContainer}>
                 <Text style={styles.name}>{name}</Text>
                 <Text style={styles.price}>$ {price}</Text>
