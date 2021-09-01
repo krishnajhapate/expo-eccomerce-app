@@ -1,5 +1,5 @@
 import React, { useState, createContext } from "react";
-import { getProducts } from "../services/ProductsService";
+import { getProduct } from "../services/ProductsService";
 
 
 export const CartContext = createContext()
@@ -34,7 +34,7 @@ export function CartProvider(props) {
         return items.reduce((sum, item) => (sum + item.qty), 0)
     }
     function getTotalPrice() {
-        return items.reduce((sum, item) => (sum + item.price))
+        return items.reduce((sum, item) => (sum + item.totalPrice), 0)
     }
 
     return (

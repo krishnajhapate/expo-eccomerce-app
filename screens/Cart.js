@@ -24,6 +24,7 @@ export function Cart({ navigation }) {
             </View>
         );
     }
+    useEffect(() => { }, [])
 
     return (
         <FlatList
