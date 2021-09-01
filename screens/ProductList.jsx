@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { View, Text, StyleSheet, FlatList } from 'react-native'
-import { useEffect } from 'react/cjs/react.production.min'
-import { useState } from 'react/cjs/react.production.min'
+import Product from '../components/Product'
 import { getProducts } from '../services/ProductsService'
 
 export default function ProductList({ navigation }) {

@@ -1,5 +1,4 @@
-import { useState } from "react/cjs/react.production.min";
-import { createContext } from "react/cjs/react.production.min";
+import React, { useState, createContext } from "react";
 import { getProducts } from "../services/ProductsService";
 
 
